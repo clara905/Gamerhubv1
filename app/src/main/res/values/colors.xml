@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Primary (biru tua - teks Gamerhub) -->
+    <color name="brand_primary">#0F3D5E</color>
+    <color name="brand_primary_variant">#0B2E47</color>
+
+    <!-- Secondary (biru muda - icon kiri) -->
+    <color name="brand_secondary">#3FA9F5</color>
+    <color name="brand_secondary_variant">#2B8CD6</color>
+
+    <!-- Accent (hijau - icon kanan) -->
+    <color name="brand_accent">#5EDC1F</color>
+    <color name="brand_accent_variant">#4CB816</color>
+
+    <!-- Background -->
+    <color name="bg_light">#F5F7FA</color>
+    <color name="bg_card">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#0F3D5E</color>
+    <color name="text_secondary">#6B7C93</color>
+
+    <!-- Splash -->
+    <color name="splash_bg">#FFFFFF</color>
+
+</resources>
