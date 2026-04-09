@@ -22,12 +22,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupUI() {
         // Greeting
-        binding.tvGreeting.text = "Selamat datang di Gamerhub 👋"
+        binding.incHeader.tvGreeting.text = "Selamat datang di Gamerhub 👋"
 
         // Subtitle / info
-        binding.tvLocation.text = "Top-up game favoritmu dengan mudah"
+        binding.incHeader.tvLocation.text = "Top-up game favoritmu dengan mudah"
 
         // Search hint
-        binding.etSearch.hint = "Cari game (ML, FF, PUBG...)"
+        binding.incSearch.etSearch.hint = "Cari game (ML, FF, PUBG...)"
     }
 }

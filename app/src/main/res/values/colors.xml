@@ -22,5 +22,7 @@
 
     <!-- Splash -->
     <color name="splash_bg">#FFFFFF</color>
+    <color name="text_muted">#64748B</color>
+    <color name="surface_soft">#F5F7FA</color>
 
 </resources>
