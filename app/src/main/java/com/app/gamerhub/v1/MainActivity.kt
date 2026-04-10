@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.gamerhub.v1.databinding.ActivityMainBinding
+import android.content.Intent
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -29,5 +31,12 @@ class MainActivity : AppCompatActivity() {
 
         // Search hint
         binding.incSearch.etSearch.hint = "Cari game (ML, FF, PUBG...)"
+        binding.incPromo.btnExplore.setOnClickListener {
+
+        }
+        binding.incPromo.btnExplore.setOnClickListener {
+            startActivity(Intent(this, GameListActivity::class.java))
+        }
+
     }
 }

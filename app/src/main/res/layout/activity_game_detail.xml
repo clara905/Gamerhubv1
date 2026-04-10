@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_soft"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_lg">
+
+        <!-- Image Game -->
+        <ImageView
+            android:id="@+id/imgGame"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Game Image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Nama Game -->
+        <TextView
+            android:id="@+id/tvGameName"
+            style="@style/Text.H1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:text="Mobile Legends"
+            app:layout_constraintTop_toBottomOf="@id/imgGame"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Meta -->
+        <TextView
+            android:id="@+id/tvMeta"
+            style="@style/Text.BodyMuted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="Moonton • MOBA • ⭐ 4.8"
+            app:layout_constraintTop_toBottomOf="@id/tvGameName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:text="Rp 0"
+            app:layout_constraintTop_toBottomOf="@id/tvMeta"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:textColor="@color/text_primary"
+            android:text="Top up game favoritmu dengan cepat, aman, dan terpercaya."
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTopUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="Top Up Sekarang"
+            app:cornerRadius="@dimen/radius_md"
+            app:backgroundTint="@color/brand_primary"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvDesc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

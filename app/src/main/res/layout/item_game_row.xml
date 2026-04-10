@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Card.Clean"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_md">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_md"
+        android:background="@android:color/white">
+
+        <!-- Image Game -->
+        <ImageView
+            android:id="@+id/imgGame"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Game Image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Nama Game -->
+        <TextView
+            android:id="@+id/tvGameName"
+            style="@style/Text.H1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/space_md"
+            android:text="Mobile Legends"
+            app:layout_constraintStart_toEndOf="@id/imgGame"
+            app:layout_constraintTop_toTopOf="@id/imgGame"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Publisher -->
+        <TextView
+            android:id="@+id/tvPublisher"
+            style="@style/Text.BodyMuted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="Moonton"
+            app:layout_constraintStart_toEndOf="@id/imgGame"
+            app:layout_constraintTop_toBottomOf="@id/tvGameName"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Category -->
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_muted"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="MOBA"
+            app:layout_constraintStart_toEndOf="@id/imgGame"
+            app:layout_constraintTop_toBottomOf="@id/tvPublisher"/>
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_sm"
+            android:text="Rp 0"
+            app:layout_constraintStart_toEndOf="@id/imgGame"
+            app:layout_constraintTop_toBottomOf="@id/tvCategory"/>
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="@dimen/space_sm"
+            android:text="⭐ 4.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCategory"/>
+
+        <!-- Badge Popular -->
+        <TextView
+            android:id="@+id/tvPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 Popular"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_popular"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

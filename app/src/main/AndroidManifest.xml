@@ -18,5 +18,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity android:name=".GameListActivity" android:exported="false" />
+        <activity android:name=".GameDetailActivity" android:exported="false" />
     </application>
 </manifest>
