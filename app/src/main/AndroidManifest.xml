@@ -20,5 +20,7 @@
             android:exported="false" />
         <activity android:name=".GameListActivity" android:exported="false" />
         <activity android:name=".GameDetailActivity" android:exported="false" />
+        <activity android:name=".ui.EventListActivity"/>
+        <activity android:name=".ui.EventDetailActivity"/>
     </application>
 </manifest>
