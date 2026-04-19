@@ -1,11 +1,11 @@
 package com.app.gamerhub.v1.ui
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.app.gamerhub.v1.R
-import com.app.gamerhub.v1.adapter.EventAdapter
 import com.app.gamerhub.v1.data.EventRepository
 
 class EventListActivity : AppCompatActivity() {
@@ -14,9 +14,26 @@ class EventListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_list)
 
-        val rv = findViewById<RecyclerView>(R.id.rvEvents)
+        // 🔙 Back
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            finish()
+        }
 
-        rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = EventAdapter(EventRepository.getEvents())
+        // 📋 ListView
+        val listView = findViewById<ListView>(R.id.listEvents)
+        val events = EventRepository.getEvents()
+
+        val adapter = EventListAdapter(this, events)
+        listView.adapter = adapter
+
+        // 🔥 Klik item → ke detail
+        listView.setOnItemClickListener { _, _, position, _ ->
+            val event = events[position]
+
+            val intent = Intent(this, EventDetailActivity::class.java)
+            intent.putExtra("EVENT_ID", event.id)
+            startActivity(intent)
+        }
     }
 }

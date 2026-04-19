@@ -1,38 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Card.Clean"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_md">
 
-    <ImageView
-        android:id="@+id/imgEvent"
-        android:layout_width="80dp"
-        android:layout_height="80dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_md"
+        android:background="@android:color/white">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_marginStart="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <!-- 🖼️ Gambar Event -->
+        <ImageView
+            android:id="@+id/imgEvent"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Gambar event"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
+        <!-- 🏆 Nama Event -->
         <TextView
             android:id="@+id/tvNamaEvent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nama Event"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_marginStart="@dimen/space_md"
+            app:layout_constraintStart_toEndOf="@id/imgEvent"
+            app:layout_constraintTop_toTopOf="@id/imgEvent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
+        <!-- 📅 Tanggal -->
         <TextView
             android:id="@+id/tvTanggal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20 April 2026"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_xs"
+            app:layout_constraintStart_toEndOf="@id/imgEvent"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaEvent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
+        <!-- 📍 Lokasi -->
         <TextView
             android:id="@+id/tvLokasi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Online"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_xs"
+            app:layout_constraintStart_toEndOf="@id/imgEvent"
+            app:layout_constraintTop_toBottomOf="@id/tvTanggal"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-</LinearLayout>
+        <!-- 🏷️ Kategori -->
+        <TextView
+            android:id="@+id/tvKategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tournament"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_kategori"
+            android:layout_marginTop="@dimen/space_sm"
+            app:layout_constraintStart_toEndOf="@id/imgEvent"
+            app:layout_constraintTop_toBottomOf="@id/tvLokasi"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

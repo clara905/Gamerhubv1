@@ -10,75 +10,95 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/space_lg">
+        android:padding="16dp">
 
-        <!-- Image Game -->
-        <ImageView
-            android:id="@+id/imgGame"
+        <!-- 🔥 HEADER IMAGE -->
+        <FrameLayout
+            android:id="@+id/headerImage"
             android:layout_width="0dp"
             android:layout_height="220dp"
-            android:scaleType="centerCrop"
-            android:contentDescription="Game Image"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Nama Game -->
+            <!-- 🖼️ Gambar Game -->
+            <ImageView
+                android:id="@+id/imgGame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_image"
+                android:clipToOutline="true"/>
+
+            <!-- 🔙 Back Button -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="12dp"
+                android:layout_gravity="top|start"
+                android:background="@drawable/bg_circle"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:elevation="8dp"/>
+        </FrameLayout>
+
+        <!-- 🎮 Nama Game -->
         <TextView
             android:id="@+id/tvGameName"
             style="@style/Text.H1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_md"
+            android:layout_marginTop="16dp"
             android:text="Mobile Legends"
-            app:layout_constraintTop_toBottomOf="@id/imgGame"
+            app:layout_constraintTop_toBottomOf="@id/headerImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Meta -->
+        <!-- 📊 Info -->
         <TextView
             android:id="@+id/tvMeta"
             style="@style/Text.BodyMuted"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_xs"
+            android:layout_marginTop="4dp"
             android:text="Moonton • MOBA • ⭐ 4.8"
             app:layout_constraintTop_toBottomOf="@id/tvGameName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Price -->
+        <!-- 💰 Harga -->
         <TextView
             android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_md"
+            android:layout_marginTop="12dp"
             android:textStyle="bold"
             android:textColor="@color/text_primary"
-            android:text="Rp 0"
+            android:text="Rp 15.000"
             app:layout_constraintTop_toBottomOf="@id/tvMeta"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <!-- Description -->
+        <!-- 📄 Deskripsi -->
         <TextView
             android:id="@+id/tvDesc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_md"
+            android:layout_marginTop="12dp"
             android:textColor="@color/text_primary"
             android:text="Top up game favoritmu dengan cepat, aman, dan terpercaya."
             app:layout_constraintTop_toBottomOf="@id/tvPrice"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Button -->
+        <!-- 🔥 Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnTopUp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_lg"
+            android:layout_marginTop="16dp"
             android:text="Top Up Sekarang"
-            app:cornerRadius="@dimen/radius_md"
+            app:cornerRadius="12dp"
             app:backgroundTint="@color/brand_primary"
             android:textColor="@android:color/white"
             app:layout_constraintTop_toBottomOf="@id/tvDesc"

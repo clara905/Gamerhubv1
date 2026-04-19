@@ -1,0 +1,16 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Warna solid (biar kontras sama text putih) -->
+    <solid android:color="#B2E2B1"/>
+
+    <!-- Sudut rounded -->
+    <corners android:radius="12dp"/>
+
+    <!-- Padding dalam -->
+    <padding
+        android:left="8dp"
+        android:top="4dp"
+        android:right="8dp"
+        android:bottom="4dp"/>
+
+</shape>

@@ -23,6 +23,7 @@ class EventDetailActivity : AppCompatActivity() {
         val tvKategori = findViewById<TextView>(R.id.tvKategori)
         val tvDeskripsi = findViewById<TextView>(R.id.tvDeskripsi)
         val btn = findViewById<Button>(R.id.btnDaftar)
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
 
         event?.let {
             // 🔥 INI BAGIAN PENTING
@@ -39,5 +40,10 @@ class EventDetailActivity : AppCompatActivity() {
         btn.setOnClickListener {
             Toast.makeText(this, "Berhasil daftar event! 🎮", Toast.LENGTH_SHORT).show()
         }
+
+        btnBack.setOnClickListener {
+            finish()
+        }
+
     }
 }

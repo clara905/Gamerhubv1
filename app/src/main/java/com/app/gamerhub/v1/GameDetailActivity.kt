@@ -35,6 +35,10 @@ class GameDetailActivity : AppCompatActivity() {
             binding.tvDesc.text = "Top up ${it.gameName} dengan cepat, aman, dan terpercaya."
         }
 
+        binding.btnBack.setOnClickListener {
+            finish()
+        }
+
         binding.btnTopUp.setOnClickListener {
             Toast.makeText(this, "Top Up berhasil! 🎮", Toast.LENGTH_SHORT).show()
         }

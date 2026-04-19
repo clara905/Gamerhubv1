@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.app.gamerhub.v1.data.GameTopUpRepository
 import com.app.gamerhub.v1.databinding.ActivityGameListBinding
 import com.app.gamerhub.v1.ui.GameTopUpListAdapter
-import com.app.gamerhub.v1.ui.EventListActivity
-
 
 class GameListActivity : AppCompatActivity() {
 
@@ -21,16 +19,21 @@ class GameListActivity : AppCompatActivity() {
         val games = GameTopUpRepository.getGameTopUps()
         val adapter = GameTopUpListAdapter(this, games)
 
+        // Set adapter ke ListView
         binding.listGames.adapter = adapter
 
-        // Klik item → ke detail
+        // 🔥 Klik item → ke detail
         binding.listGames.setOnItemClickListener { _, _, position, _ ->
             val item = games[position]
 
             val intent = Intent(this, GameDetailActivity::class.java)
             intent.putExtra(GameDetailActivity.EXTRA_GAME_ID, item.id)
-
             startActivity(intent)
+        }
+
+        // 🔙 Back button (DI LUAR)
+        binding.btnBack.setOnClickListener {
+            finish()
         }
     }
 }
